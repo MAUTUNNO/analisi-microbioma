@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analisi Mercato Microbioma NGS – Calabria & Italia</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9fafb; color: #333; }
+    header { background: #2c7a7b; color: white; padding: 20px; text-align: center; }
+    h1 { margin: 0; }
+    section { padding: 20px; max-width: 1100px; margin: auto; }
+    h2 { color: #2c7a7b; margin-top: 40px; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    th { background: #e6fffa; }
+    .chart-container { width: 100%; max-width: 700px; margin: 30px auto; }
+    footer { background: #2c7a7b; color: white; text-align: center; padding: 10px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Analisi del Mercato Microbioma in NGS<br>Regione Calabria & Italia</h1>
+  </header>
+
+  <section>
+    <h2>1. Analisi SWOT</h2>
+    <div class="chart-container">
+      <canvas id="swotChart"></canvas>
+    </div>
+
+    <ul>
+      <li><b>Forze:</b> Crescente interesse scientifico, tecnologia consolidata NGS, applicazioni cliniche emergenti.</li>
+      <li><b>Debolezze:</b> Costi elevati, necessità di bioinformatici esperti, infrastrutture complesse.</li>
+      <li><b>Opportunità:</b> Gare pubbliche ospedaliere, progetti di ricerca regionali/nazionali, personalizzazione medica.</li>
+      <li><b>Minacce:</b> Competizione internazionale, calo budget sanitario, tempi lunghi di adozione clinica.</li>
+    </ul>
+
+    <h2>2. Analisi PESTEL</h2>
+    <ul>
+      <li><b>Politico:</b> Fondi PNRR, incentivi alla digitalizzazione e sanità innovativa.</li>
+      <li><b>Economico:</b> Alto costo delle piattaforme NGS, pressione sui prezzi nelle gare pubbliche.</li>
+      <li><b>Sociale:</b> Crescente attenzione a microbiota e salute intestinale.</li>
+      <li><b>Tecnologico:</b> Automazione crescente, software bioinformatici avanzati, IA per analisi dati.</li>
+      <li><b>Ambientale:</b> Necessità di sostenibilità nei reagenti e riduzione plastica monouso.</li>
+      <li><b>Legale:</b> Regolamentazioni CE-IVDR, privacy dati genetici (GDPR).</li>
+    </ul>
+
+    <h2>3. Regione Calabria</h2>
+    <p>Le analisi del microbioma NGS sono limitate, ma in crescita. Alcuni ospedali e università partecipano a <b>gare pubbliche</b> focalizzate su progetti di ricerca e diagnostica avanzata.</p>
+    <ul>
+      <li><b>Test/anno stimati:</b> 800-1200 (principalmente ricerca clinica e progetti accademici).</li>
+      <li><b>Gare attive:</b> 2 bandi regionali per biotecnologie avanzate (scadenze 2025-2026).</li>
+      <li><b>Budget medio gara:</b> 150k - 250k €.</li>
+    </ul>
+
+    <h2>4. Competitor – Prezzi e Offerte</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Azienda</th>
+          <th>Prezzo Listino</th>
+          <th>Prezzo Offerto</th>
+          <th>Composizione Kit</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Thermo Fisher</td>
+          <td>~ 200 € / campione</td>
+          <td>~ 150 € / campione (gara)</td>
+          <td>Estrazione DNA, Amplificazione, Indici, Software</td>
+          <td>Affidabilità e brand forte</td>
+        </tr>
+        <tr>
+          <td>Arrow Diagnostics</td>
+          <td>~ 180 €</td>
+          <td>~ 140 €</td>
+          <td>Kit modulare (estrazione + librerie)</td>
+          <td>Molto competitivo nelle gare pubbliche</td>
+        </tr>
+        <tr>
+          <td>4bases</td>
+          <td>~ 160 €</td>
+          <td>~ 120 €</td>
+          <td>Kit NGS + pipeline software cloud</td>
+          <td>Innovativo ma meno diffuso</td>
+        </tr>
+        <tr>
+          <td>Altri (Illumina, Qiagen…)</td>
+          <td>~ 220 €</td>
+          <td>~ 170 €</td>
+          <td>Soluzioni integrate</td>
+          <td>Leadership globale, costi più alti</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="chart-container">
+      <canvas id="competitorChart"></canvas>
+    </div>
+
+    <h2>5. Conclusioni Strategiche per Perfectlab</h2>
+    <ul>
+      <li>Posizionarsi come <b>partner flessibile</b> per ricerca e diagnostica clinica.</li>
+      <li>Offrire <b>pacchetti integrati</b> (estrazione + librerie + analisi software).</li>
+      <li>Proporre <b>formazione bioinformatica</b> ai clienti per aumentare il valore aggiunto.</li>
+      <li>Partecipare alle <b>gare regionali Calabria</b> con pricing competitivo e servizi di supporto tecnico.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Perfectlab srls – Analisi di mercato NGS Microbioma</p>
+  </footer>
+
+  <script>
+    // SWOT Radar Chart
+    const swotCtx = document.getElementById('swotChart');
+    new Chart(swotCtx, {
+      type: 'radar',
+      data: {
+        labels: ['Forze', 'Debolezze', 'Opportunità', 'Minacce'],
+        datasets: [{
+          label: 'Valutazione SWOT',
+          data: [8, 5, 9, 6],
+          fill: true,
+          backgroundColor: 'rgba(44, 122, 123, 0.2)',
+          borderColor: '#2c7a7b',
+          pointBackgroundColor: '#2c7a7b'
+        }]
+      },
+      options: { responsive: true, scales: { r: { min: 0, max: 10 } } }
+    });
+
+    // Competitor Bar Chart
+    const competitorCtx = document.getElementById('competitorChart');
+    new Chart(competitorCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Thermo Fisher', 'Arrow', '4bases', 'Altri'],
+        datasets: [
+          { label: 'Prezzo Listino', data: [200, 180, 160, 220], backgroundColor: 'rgba(54, 162, 235, 0.7)' },
+          { label: 'Prezzo Offerto', data: [150, 140, 120, 170], backgroundColor: 'rgba(255, 99, 132, 0.7)' }
+        ]
+      },
+      options: { responsive: true, scales: { y: { beginAtZero: true } } }
+    });
+  </script>
+</body>
+</html>
